@@ -1,0 +1,8 @@
+FROM mysql:8.0  
+ENV MYSQL_DATABASE zerli 
+ENV MYSQL_USER mamba  
+ENV MYSQL_PASSWORD madar_11  
+ENV MYSQL_ROOT_PASSWORD madar_11 
+COPY zerli.sql /docker-entrypoint-initdb.d/ 
+VOLUME /var/lib/mysql  # Persistent storage for the database
+EXPOSE 3306
